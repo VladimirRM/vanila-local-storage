@@ -27,6 +27,19 @@
     const items = JSON.parse(localStorage.getItem('items')) || [];
 
 
+    function addItem(e){
+        e.preventDefault()
+     console.log( e.target.item.value)
+     const text = e.target.item.value
+     const item = {
+        text: text,
+        checked: false
+      }
+      items.push(item)
+      console.log(item)
+      console.log(items)
+    }
+    addItemsForm.addEventListener( 'submit',addItem)
 
 
   </script>
